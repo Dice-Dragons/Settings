@@ -1,0 +1,109 @@
+name: Publish Setting to Dice&Dragons XFRM
+
+on:
+  workflow_dispatch:
+    inputs:
+      setting_folder:
+        description: 'Ordnername des Settings (z. B. pathfinder-1e)'
+        required: true
+        type: string
+      release_notes:
+        description: 'Changelog / Versionshinweise'
+        required: false
+        default: 'Automatisches Update via GitHub Repository.'
+        type: string
+
+  push:
+    tags:
+      - '*@v*'  # Beispiel: pathfinder-1e@v1.0.1
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Parse Trigger & Variables
+        id: vars
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            SETTING_DIR="${{ github.event.inputs.setting_folder }}"
+            NOTES="${{ github.event.inputs.release_notes }}"
+          else
+            # Extrahiere Ordner aus Tag (z. B. "pathfinder-1e@v1.0.1" -> "pathfinder-1e")
+            TAG_NAME="${{ github.ref_name }}"
+            SETTING_DIR="${TAG_NAME%@*}"
+            NOTES="Release $TAG_NAME via Git Tag"
+          fi
+
+          if [ ! -d "$SETTING_DIR" ]; then
+            echo "Fehler: Ordner '$SETTING_DIR' existiert nicht!"
+            exit 1
+          fi
+
+          # Metadaten auslesen
+          if [ -f "$SETTING_DIR/metadata.json" ]; then
+            RESOURCE_ID=$(jq -r '.resource_id' "$SETTING_DIR/metadata.json")
+            VERSION=$(jq -r '.version' "$SETTING_DIR/metadata.json")
+          else
+            echo "Fehler: $SETTING_DIR/metadata.json fehlt!"
+            exit 1
+          fi
+
+          echo "setting_dir=$SETTING_DIR" >> $GITHUB_OUTPUT
+          echo "resource_id=$RESOURCE_ID" >> $GITHUB_OUTPUT
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "notes=$NOTES" >> $GITHUB_OUTPUT
+
+      - name: Create Setting ZIP Archive
+        id: zip
+        run: |
+          SETTING_DIR="${{ steps.vars.outputs.setting_dir }}"
+          ZIP_NAME="${SETTING_DIR}.zip"
+          
+          # Ordnerinhalt direkt ins ZIP packen (damit setting.json im Root des ZIPs liegt)
+          cd "$SETTING_DIR"
+          zip -r "../$ZIP_NAME" . -x "*.git*" "metadata.json"
+          cd ..
+          
+          echo "zip_path=$ZIP_NAME" >> $GITHUB_OUTPUT
+
+      - name: Upload to XenForo Resource Manager (Dice&Dragons)
+        env:
+          XF_API_KEY: ${{ secrets.XF_API_KEY }}
+          XF_API_USER: ${{ secrets.XF_API_USER }}
+        run: |
+          RESOURCE_ID="${{ steps.vars.outputs.resource_id }}"
+          VERSION="${{ steps.vars.outputs.version }}"
+          NOTES="${{ steps.vars.outputs.notes }}"
+          ZIP_FILE="${{ steps.zip.outputs.zip_path }}"
+
+          echo "Lade Version $VERSION für Resource ID $RESOURCE_ID hoch..."
+
+          RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" -X POST \
+            "https://diceanddragons.de/api/resources/${RESOURCE_ID}/releases" \
+            -H "XF-Api-Key: ${XF_API_KEY}" \
+            -H "XF-Api-User: ${XF_API_USER}" \
+            -F "version_string=${VERSION}" \
+            -F "message=${NOTES}" \
+            -F "file=@${ZIP_FILE};type=application/zip")
+
+          HTTP_BODY=$(echo "$RESPONSE" | sed -e '$d')
+          HTTP_STATUS=$(echo "$RESPONSE" | tail -n1 | cut -d':' -f2)
+
+          echo "Server-Antwort ($HTTP_STATUS): $HTTP_BODY"
+
+          if [ "$HTTP_STATUS" -ne 200 ] && [ "$HTTP_STATUS" -ne 201 ]; then
+            echo "Fehler beim Upload zu XenForo!"
+            exit 1
+          fi
+
+          echo "Erfolgreich im Resource Manager veröffentlicht!"
+
+      - name: Create GitHub Release (Optional)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.zip.outputs.zip_path }}
+          body: ${{ steps.vars.outputs.notes }}

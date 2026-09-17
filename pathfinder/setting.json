@@ -1,0 +1,623 @@
+{
+    "export_type": "cv6_setting",
+    "version": 2031370,
+    "format_version": 2,
+    "setting": {
+        "title": "Pathfinder",
+        "url_slug": "pathfinder-1",
+        "description": "[B]Pathfinder First Edition (1e)[/B] is a tabletop role-playing game published by Paizo in 2009. Designed as a refined evolution of Dungeons & Dragons 3.5 under the Open Game License (OGL), it is frequently referred to as \"D&D 3.75.\"\n\n[LIST]\n[*][B]Core Mechanics:[/B] Built on the traditional [B]d20 system[/B] (rolling a 20-sided die + modifiers against a target difficulty class).\n[*][B]Character Customization:[/B] Offers immense build depth with dozens of classes, archetypes, feats, and spells, catering heavily to system mastery and theorycrafting (often nicknamed \"Mathfinder\").\n[*][B]Setting:[/B] Set in the rich high-fantasy world of [B]Golarion[/B], which blends classic fantasy with elements of cosmic horror, steampunk, planar travel, and sword-and-sorcery.\n[*][B]Adventure Paths:[/B] Famous for its epic, multi-volume pre-written campaigns from level 1 to 20 (e.g., [I]Rise of the Runelords[/I], [I]Kingmaker[/I], [I]Wrath of the Righteous[/I]).\n[*][B]Tactical Depth:[/B] Features crunchy, grid-based combat with comprehensive rules for combat maneuvers, positioning, and attacks of opportunity.\n[/LIST]",
+        "heading": "",
+        "archetype_heading": "Rasse & Klasse",
+        "image_url": "images/pathfinder-logo2.png",
+        "banner_url": "",
+        "default_name": "",
+        "default_avatar": "fa-sword",
+        "help_url": "",
+        "active": true,
+        "display_order": 1,
+        "level": true,
+        "level_options": {
+            "prefix": "Level",
+            "type": "number"
+        },
+        "idcard": true,
+        "idcard_options": {
+            "target": {
+                "target-1": "name-split",
+                "target-2": "2col",
+                "target-3": "2col",
+                "target-4": "default",
+                "target-5": "default",
+                "target-6": "default",
+                "target-7": "default"
+            },
+            "fields": "{\"cv6-data-1\":{\"e:name\":\"Character name\",\"e:getLevelTitle\":\"Latest Level\"},\"cv6-data-2\":{\"pf_cha\":\"Charisma\",\"pf_cha_mod\":\"Charisma Modifier\"},\"cv6-data-3\":{\"pf_dex\":\"Dexterity\",\"pf_dex_mod\":\"Dexterity Modifier\"},\"cv6-data-4\":[],\"cv6-data-5\":[],\"cv6-data-6\":[],\"cv6-data-7\":[]}",
+            "layout": "layout-2"
+        },
+        "character_as_thread": false,
+        "cv6_indexable": false,
+        "cv6_display_index": false,
+        "publisher": {
+            "title": "Dice & Dragons",
+            "url_slug": "dice-dragons"
+        },
+        "genre": {
+            "title": "Fantasy"
+        },
+        "edition": {
+            "title": "1.0",
+            "css_class": "label label--primary"
+        },
+        "custom_fields": {
+            "copublisher": [
+                "1"
+            ],
+            "translation": "",
+            "url": "http://dev.local/",
+            "help": "http://dev.local/index.php?hilfe/",
+            "genre": [
+                "3",
+                "5",
+                "6"
+            ]
+        }
+    },
+    "categories": [
+        {
+            "category_id": 33,
+            "parent_category_id": 0,
+            "title": "Stats",
+            "description": "",
+            "display_order": 100,
+            "itemchooser": "ALL",
+            "display_type": "two-columns",
+            "active": true,
+            "fields": [
+                "CHA",
+                "CHA_mod",
+                "CON",
+                "CON_mod",
+                "DEX",
+                "DEX_mod",
+                "INT",
+                "INT_mod",
+                "STR",
+                "STR_mod",
+                "WIS",
+                "WIS_mod"
+            ]
+        },
+        {
+            "category_id": 35,
+            "parent_category_id": 33,
+            "title": "Calculated Stats",
+            "description": "",
+            "display_order": 300,
+            "itemchooser": "ALL",
+            "display_type": "three-columns",
+            "active": true,
+            "fields": [
+                "HP"
+            ]
+        },
+        {
+            "category_id": 36,
+            "parent_category_id": 0,
+            "title": "Skills",
+            "description": "Enter all basic rang data here",
+            "display_order": 200,
+            "itemchooser": "ALL",
+            "display_type": "two-columns",
+            "active": true,
+            "fields": [
+                "Acrobatics",
+                "Acrobatics_misc",
+                "Acrobatics_rang",
+                "Appraise",
+                "Appraise_misc",
+                "Appraise_rang",
+                "Bluff",
+                "Bluff_misc",
+                "Bluff_rang",
+                "Climb",
+                "Climb_misc",
+                "Climb_rang",
+                "Craft",
+                "Craft_misc",
+                "Craft_rang",
+                "Diplomacy",
+                "Diplomacy_misc",
+                "Diplomacy_rang",
+                "DisableDevice",
+                "DisableDevice_misc",
+                "DisableDevice_rang",
+                "Disguise",
+                "Disguise_misc",
+                "Disguise_rang",
+                "EscapeArtist",
+                "EscapeArtist_misc",
+                "EscapeArtist_rang",
+                "Fly",
+                "Fly_misc",
+                "Fly_rang",
+                "HandleAnimal",
+                "HandleAnimal_misc",
+                "HandleAnimal_rang",
+                "Heal",
+                "Heal_misc",
+                "Heal_rang",
+                "Intimidate",
+                "Intimidate_misc",
+                "Intimidate_rang",
+                "Knl_arcana",
+                "Knl_arcana_misc",
+                "Knl_arcana_rang",
+                "Knl_dungeoneering",
+                "Knl_dungeoneering_misc",
+                "Knl_dungeoneering_rang",
+                "Knl_engineering",
+                "Knl_engineering_misc",
+                "Knl_engineering_rang",
+                "Knl_geography",
+                "Knl_geography_misc",
+                "Knl_geography_rang",
+                "Knl_history",
+                "Knl_history_misc",
+                "Knl_history_rang",
+                "Knl_local",
+                "Knl_local_misc",
+                "Knl_local_rang",
+                "Knl_nature",
+                "Knl_nature_misc",
+                "Knl_nature_rang",
+                "Knl_nobility",
+                "Knl_nobility_misc",
+                "Knl_nobility_rang",
+                "Knl_planes",
+                "Knl_planes_misc",
+                "Knl_planes_rang",
+                "Knl_religion",
+                "Knl_religion_misc",
+                "Knl_religion_rang",
+                "Linguistics",
+                "Linguistics_misc",
+                "Linguistics_rang",
+                "Perception",
+                "Perception_misc",
+                "Perception_rang",
+                "Perform",
+                "Perform_misc",
+                "Perform_rang",
+                "Profession",
+                "Profession_misc",
+                "Profession_rang",
+                "Ride",
+                "Ride_misc",
+                "Ride_rang",
+                "Sense_Motive",
+                "Sense_Motive_misc",
+                "Sense_Motive_rang",
+                "Sleight_Hand",
+                "Sleight_Hand_misc",
+                "Sleight_Hand_rang",
+                "Spellcraft",
+                "Spellcraft_misc",
+                "Spellcraft_rang",
+                "Stealth",
+                "Stealth_misc",
+                "Stealth_rang",
+                "Survival",
+                "Survival_misc",
+                "Survival_rang",
+                "Swim",
+                "Swim_misc",
+                "Swim_rang",
+                "Use_Magic_Device",
+                "Use_Magic_Device_misc",
+                "Use_Magic_Device_rang"
+            ]
+        },
+        {
+            "category_id": 39,
+            "parent_category_id": 36,
+            "title": "Class Skills",
+            "description": "",
+            "display_order": 200,
+            "itemchooser": "ALL",
+            "display_type": "two-columns",
+            "active": true,
+            "fields": [
+                "class_skills"
+            ]
+        }
+    ],
+    "bundle_templates": [
+        {
+            "title": "Pathfinder 1e Skill Test",
+            "template_version": 9,
+            "sub_fields": [
+                {
+                    "suffix": "",
+                    "label_suffix": "",
+                    "preset_title": "",
+                    "formula_template": "{id}_rang + {attr_mod} + {id}_misc + if(is_a(class_skills ) && {id}_rang > 0 ,3,0)",
+                    "exclude_wizard": true,
+                    "display_order_offset": 0,
+                    "is_primary": true
+                },
+                {
+                    "suffix": "_rang",
+                    "label_suffix": "(Rang)",
+                    "preset_title": "Pathfinder Skills Rank",
+                    "formula_template": "",
+                    "exclude_wizard": false,
+                    "display_order_offset": 1,
+                    "is_primary": false
+                },
+                {
+                    "suffix": "_misc",
+                    "label_suffix": "(Sonstige)",
+                    "preset_title": "Skill Misc Value",
+                    "formula_template": "",
+                    "exclude_wizard": true,
+                    "display_order_offset": 2,
+                    "is_primary": false
+                }
+            ],
+            "variables": [
+                {
+                    "key": "attr_mod",
+                    "label": "Attribut-Modifier",
+                    "type": "field_select",
+                    "category_id": 33,
+                    "default": ""
+                }
+            ],
+            "display_order": 0
+        },
+        {
+            "title": "Stat Set",
+            "template_version": 14,
+            "sub_fields": [
+                {
+                    "suffix": "",
+                    "label_suffix": "",
+                    "preset_title": "Stats",
+                    "formula_template": "",
+                    "exclude_wizard": false,
+                    "display_order_offset": 0,
+                    "is_primary": true
+                },
+                {
+                    "suffix": "_mod",
+                    "label_suffix": "Modifier",
+                    "preset_title": "",
+                    "formula_template": "floor(({id} - 10) / 2)",
+                    "exclude_wizard": true,
+                    "display_order_offset": 1,
+                    "is_primary": false
+                }
+            ],
+            "variables": [],
+            "display_order": 100
+        }
+    ],
+    "bundles": [
+        {
+            "base_field_id": "Acrobatics",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "DEX_mod"
+            }
+        },
+        {
+            "base_field_id": "Appraise",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Bluff",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "CHA_mod"
+            }
+        },
+        {
+            "base_field_id": "Climb",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "STR_mod"
+            }
+        },
+        {
+            "base_field_id": "Craft",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Diplomacy",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "CHA_mod"
+            }
+        },
+        {
+            "base_field_id": "DisableDevice",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "DEX_mod"
+            }
+        },
+        {
+            "base_field_id": "Disguise",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "CHA_mod"
+            }
+        },
+        {
+            "base_field_id": "EscapeArtist",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "DEX_mod"
+            }
+        },
+        {
+            "base_field_id": "Fly",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "DEX_mod"
+            }
+        },
+        {
+            "base_field_id": "HandleAnimal",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "CHA_mod"
+            }
+        },
+        {
+            "base_field_id": "Heal",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "WIS_mod"
+            }
+        },
+        {
+            "base_field_id": "Intimidate",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "CHA_mod"
+            }
+        },
+        {
+            "base_field_id": "Knl_arcana",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Knl_dungeoneering",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Knl_engineering",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Knl_geography",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Knl_history",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Knl_local",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Knl_nature",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Knl_nobility",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Knl_planes",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Knl_religion",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Linguistics",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Perception",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "WIS_mod"
+            }
+        },
+        {
+            "base_field_id": "Perform",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "CHA_mod"
+            }
+        },
+        {
+            "base_field_id": "Profession",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "WIS_mod"
+            }
+        },
+        {
+            "base_field_id": "Ride",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "DEX_mod"
+            }
+        },
+        {
+            "base_field_id": "Sense_Motive",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "WIS_mod"
+            }
+        },
+        {
+            "base_field_id": "Sleight_Hand",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "DEX_mod"
+            }
+        },
+        {
+            "base_field_id": "Spellcraft",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "INT_mod"
+            }
+        },
+        {
+            "base_field_id": "Stealth",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "DEX_mod"
+            }
+        },
+        {
+            "base_field_id": "Survival",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "WIS_mod"
+            }
+        },
+        {
+            "base_field_id": "Swim",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "STR_mod"
+            }
+        },
+        {
+            "base_field_id": "Use_Magic_Device",
+            "bundle_template_title": "Pathfinder 1e Skill Test",
+            "applied_template_version": 9,
+            "resolved_variables": {
+                "attr_mod": "CHA_mod"
+            }
+        },
+        {
+            "base_field_id": "STR",
+            "bundle_template_title": "Stat Set",
+            "applied_template_version": 14,
+            "resolved_variables": []
+        },
+        {
+            "base_field_id": "DEX",
+            "bundle_template_title": "Stat Set",
+            "applied_template_version": 14,
+            "resolved_variables": []
+        },
+        {
+            "base_field_id": "CON",
+            "bundle_template_title": "Stat Set",
+            "applied_template_version": 14,
+            "resolved_variables": []
+        },
+        {
+            "base_field_id": "INT",
+            "bundle_template_title": "Stat Set",
+            "applied_template_version": 14,
+            "resolved_variables": []
+        },
+        {
+            "base_field_id": "WIS",
+            "bundle_template_title": "Stat Set",
+            "applied_template_version": 14,
+            "resolved_variables": []
+        },
+        {
+            "base_field_id": "CHA",
+            "bundle_template_title": "Stat Set",
+            "applied_template_version": 14,
+            "resolved_variables": []
+        }
+    ]
+}

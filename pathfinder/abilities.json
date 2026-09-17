@@ -1,0 +1,209 @@
+{
+    "ability_groups": [
+        {
+            "type_key": "feat",
+            "title": "Talente",
+            "required_archetypes": [],
+            "max_assignments": 0,
+            "display_order": 10
+        },
+        {
+            "type_key": "",
+            "title": "Blutlinien",
+            "required_archetypes": [
+                "Hexenmeister"
+            ],
+            "max_assignments": 1,
+            "display_order": 10
+        },
+        {
+            "type_key": "class_feature",
+            "title": "Class Feature",
+            "required_archetypes": [],
+            "max_assignments": 0,
+            "display_order": 20
+        },
+        {
+            "type_key": "racial_trait",
+            "title": "Rassennachteile",
+            "required_archetypes": [],
+            "max_assignments": 0,
+            "display_order": 30
+        },
+        {
+            "type_key": "trait",
+            "title": "Trait",
+            "required_archetypes": [],
+            "max_assignments": 0,
+            "display_order": 40
+        }
+    ],
+    "abilities": [
+        {
+            "title": "Wachsam",
+            "group_title": "Trait",
+            "ability_type": "trait",
+            "short_description": "Wachsam",
+            "description": "Erhält einen Bonus auf Wahrnehmung",
+            "max_ranks": 1,
+            "display_order": 0,
+            "modifiers": [
+                {
+                    "target_field": "Perception_misc",
+                    "bonus_type": "untyped",
+                    "scale_type": "flat",
+                    "value": 3
+                }
+            ],
+            "prerequisites": {
+                "min_level": 1,
+                "required_abilities": [],
+                "required_archetypes": [],
+                "field_requirements": [
+                    {
+                        "field_id": "WIS",
+                        "min_value": 15
+                    }
+                ]
+            }
+        },
+        {
+            "title": "Bardenwissen",
+            "group_title": "Class Feature",
+            "ability_type": "class_feature",
+            "short_description": "",
+            "description": "",
+            "max_ranks": 1,
+            "display_order": 0,
+            "modifiers": [
+                {
+                    "target_field": "Knl_arcana_misc",
+                    "bonus_type": "untyped",
+                    "scale_type": "flat",
+                    "value": 1
+                },
+                {
+                    "target_field": "Knl_dungeoneering_misc",
+                    "bonus_type": "untyped",
+                    "scale_type": "flat",
+                    "value": 1
+                },
+                {
+                    "target_field": "Knl_engineering_misc",
+                    "bonus_type": "untyped",
+                    "scale_type": "flat",
+                    "value": 1
+                },
+                {
+                    "target_field": "Knl_geography_misc",
+                    "bonus_type": "untyped",
+                    "scale_type": "flat",
+                    "value": 1
+                }
+            ],
+            "prerequisites": {
+                "min_level": 1,
+                "required_abilities": [],
+                "required_archetypes": [
+                    "Barde"
+                ],
+                "field_requirements": []
+            }
+        },
+        {
+            "title": "Stark",
+            "group_title": "Talente",
+            "ability_type": "feat",
+            "short_description": "wirklich Stark",
+            "description": "So rrichtig mit Power",
+            "max_ranks": 1,
+            "display_order": 0,
+            "modifiers": [
+                {
+                    "target_field": "STR",
+                    "bonus_type": "enhancement",
+                    "scale_type": "flat",
+                    "value": 2
+                }
+            ],
+            "prerequisites": {
+                "min_level": 0,
+                "required_abilities": [],
+                "required_archetypes": [],
+                "field_requirements": []
+            }
+        },
+        {
+            "title": "Klarer Himmel",
+            "group_title": "Class Feature",
+            "ability_type": "class_feature",
+            "short_description": "ertgerg",
+            "description": "dfgdfg",
+            "max_ranks": 3,
+            "display_order": 0,
+            "modifiers": [
+                {
+                    "target_field": "DEX",
+                    "bonus_type": "untyped",
+                    "scale_type": "flat",
+                    "value": 2
+                }
+            ],
+            "prerequisites": {
+                "min_level": 0,
+                "required_abilities": [],
+                "required_archetypes": [],
+                "field_requirements": []
+            }
+        },
+        {
+            "title": "Feenblutlinie",
+            "group_title": "Blutlinien",
+            "ability_type": "group_10",
+            "short_description": "",
+            "description": "",
+            "max_ranks": 1,
+            "display_order": 0,
+            "modifiers": [],
+            "prerequisites": {
+                "min_level": 0,
+                "required_abilities": [],
+                "required_archetypes": [],
+                "field_requirements": []
+            }
+        },
+        {
+            "title": "Zauberfindig",
+            "group_title": "Talente",
+            "ability_type": "feat",
+            "short_description": "",
+            "description": "",
+            "max_ranks": 1,
+            "display_order": 10,
+            "modifiers": [
+                {
+                    "target_field": "Knl_arcana_misc",
+                    "bonus_type": "untyped",
+                    "scale_type": "tiers",
+                    "value": 0,
+                    "tiers": [
+                        {
+                            "min_level": 1,
+                            "value": 6
+                        },
+                        {
+                            "min_level": 10,
+                            "value": 10
+                        }
+                    ]
+                }
+            ],
+            "prerequisites": {
+                "min_level": 0,
+                "required_abilities": [],
+                "required_archetypes": [],
+                "field_requirements": []
+            }
+        }
+    ]
+}

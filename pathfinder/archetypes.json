@@ -1,0 +1,174 @@
+{
+    "archetype_groups": [
+        {
+            "type_key": "race",
+            "title": "Race",
+            "max_assignments": 1,
+            "is_levelable": false,
+            "display_order": 10,
+            "field_definitions": []
+        },
+        {
+            "type_key": "class",
+            "title": "Class",
+            "max_assignments": 0,
+            "is_levelable": false,
+            "display_order": 20,
+            "field_definitions": [
+                {
+                    "key": "tw",
+                    "label": "Trefferwürfel",
+                    "default": 0
+                }
+            ]
+        }
+    ],
+    "archetypes": [
+        {
+            "title": "Gnom",
+            "group_key": "race",
+            "group_title": "Race",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 10,
+            "active": true
+        },
+        {
+            "title": "Halb-Ork",
+            "group_key": "race",
+            "group_title": "Race",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 20,
+            "active": true
+        },
+        {
+            "title": "Elfen",
+            "group_key": "race",
+            "group_title": "Race",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 30,
+            "active": true
+        },
+        {
+            "title": "Zwerge",
+            "group_key": "race",
+            "group_title": "Race",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 40,
+            "active": true
+        },
+        {
+            "title": "Halbling",
+            "group_key": "race",
+            "group_title": "Race",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 50,
+            "active": true
+        },
+        {
+            "title": "Mensch",
+            "group_key": "race",
+            "group_title": "Race",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 60,
+            "active": true
+        },
+        {
+            "title": "Halb-Elf",
+            "group_key": "race",
+            "group_title": "Race",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [
+                "Wachsam"
+            ],
+            "display_order": 70,
+            "active": true
+        },
+        {
+            "title": "Schurke",
+            "group_key": "class",
+            "group_title": "Class",
+            "description": "",
+            "properties": {
+                "tw": 8
+            },
+            "granted_abilities": [],
+            "display_order": 80,
+            "active": true
+        },
+        {
+            "title": "Söldner",
+            "group_key": "class",
+            "group_title": "Class",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 90,
+            "active": true
+        },
+        {
+            "title": "Druide",
+            "group_key": "class",
+            "group_title": "Class",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 100,
+            "active": true
+        },
+        {
+            "title": "Barbar",
+            "group_key": "class",
+            "group_title": "Class",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 110,
+            "active": true
+        },
+        {
+            "title": "Barde",
+            "group_key": "class",
+            "group_title": "Class",
+            "description": "Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies. Bards weave magic into words and music to inspire allies.",
+            "properties": [],
+            "granted_abilities": [
+                "Bardenwissen"
+            ],
+            "display_order": 120,
+            "active": true
+        },
+        {
+            "title": "Hexenmeister",
+            "group_key": "class",
+            "group_title": "Class",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 130,
+            "active": true
+        },
+        {
+            "title": "Zauberer",
+            "group_key": "class",
+            "group_title": "Class",
+            "description": "",
+            "properties": [],
+            "granted_abilities": [],
+            "display_order": 140,
+            "active": true
+        }
+    ]
+}
