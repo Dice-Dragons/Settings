@@ -3,7 +3,7 @@
 
 ![XenForo](https://img.shields.io/badge/XenForo-2.3%2B-orange.svg) ![Add-on](https://img.shields.io/badge/cv6%2FCharEdit-1.1.2%2B-blue.svg)
 
-Dieses Repository enthält vorkonfigurierte Rollenspielsystem-Settings, Felddefinitionen, Archetypen und Fähigkeiten für das Add-On [[DD] Character Database](https://diceanddragons.de/) (`cv6/CharEdit`) für XenForo 2.3.
+Dieses Repository enthält vorkonfigurierte Rollenspielsystem-Settings, Felddefinitionen, Archetypen und Fähigkeiten für das Add-On [[DD] Character Database](https://forum.dice-dragons.de/downloads/charedit.179/) (`cv6/CharEdit`) für XenForo 2.3.
 
 Es ermöglicht Foren-Administratoren, fertige Spielsysteme direkt in ihre Community zu importieren, und bietet der Community eine zentrale Plattform, um bestehende Regelsysteme gemeinsam zu pflegen, zu erweitern und neue Systeme per Git beizusteuern.
 
@@ -64,7 +64,7 @@ php cmd.php cv6:setting-import "/pfad/zu/settings-repo/<setting-slug>" --overwri
 
 ### Option 2: Über das Admin Control Panel (Web-UI)
 
-1. Packe den Inhalt des jeweiligen Setting-Ordners (z. B. `pathfinder/`) in eine `.zip`-Datei (oder lade das fertige ZIP aus dem [Dice & Dragons Resource Manager](https://diceanddragons.de/) herunter).
+1. Packe den Inhalt des jeweiligen Setting-Ordners (z. B. `pathfinder/`) in eine `.zip`-Datei (oder lade das fertige ZIP aus dem [Dice & Dragons Resource Manager](https://forum.dice-dragons.de/downloads/gallery/) herunter).
 2. Gehe im XenForo AdminCP zu **cv6 CharEdit** &rarr; **Settings** &rarr; **Import Setting**.
 3. Wähle das `.zip`-Archiv aus, prüfe die gewünschten Optionen und klicke auf **Import**.
 
@@ -82,7 +82,7 @@ php cmd.php cv6:setting-export "<SettingNameOderId>" "/pfad/zu/settings-repo/<se
 
 Beispiel:
 ```bash
-php cmd.php cv6:setting-export "Pathfinder" "X:/settings-repo/pathfinder"
+php cmd.php cv6:setting-export "Pathfinder" "/settings-repo/pathfinder"
 ```
 
 Der CLI-Befehl führt automatisch folgende Schritte durch:
